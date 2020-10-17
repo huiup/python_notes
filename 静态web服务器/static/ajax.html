@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        // $.ajax({
+        //     // 请求的资源地址，不指定ip地址和端口号表示请求的是自己的服务器资源数据
+        //     url:"data.json",
+        //     type:"GET",
+        //     // 指定对服务器数据的解析格式
+        //     dataType: "JSON",
+        //     // data:表示发送给web服务器的参数
+        //     data:{"name":"zhang"},
+        //     success:function(data){
+        //         console.log(data);
+        //         console.log(data.name)
+        //     },
+        //     error:function(){
+        //         console.log("网络异常！")
+        //     },
+        //     // 是否使用异步，默认不指定表示是异步请求
+        //     async:true
+        // });
+        // 简写
+        // 发送get方式的ajax请求的简写方式
+        // 1. 请求的地址
+        // 2．请求传给web服务器的参数
+        // 3．请求成功的回调函数
+        // 4. 返回数据的解析方式
+        // 5. error 失败执行的回调函数
+        // $.get("data.json",{"name":"zhang"},function(data){
+        //     console.log(data.name)
+        // },"JSON").error(function(){
+        //     alert("网络异常")
+        // });
+
+        // post请求
+        $.post("data.json",{"name":"zhang"},function(data){
+            // console.log(data.name)
+            alert(data.age)
+        },"JSON").error(function(){
+            alert("网络异常")
+        });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
