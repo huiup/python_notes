@@ -7,3 +7,5 @@ params = sys.argv
 
 # 列表里面每一项数据都是字符串类型
 print(params, type(params))
+print(params[1])
+print(type(params[1]))
