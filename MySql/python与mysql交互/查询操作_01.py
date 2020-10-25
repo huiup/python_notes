@@ -28,11 +28,11 @@ def main():
     # cursor.execute(sql, ('zhang')) # 第二个参数是元组/列表/字典
 
     # 四、获取查询结果，得到的数据类型是一个元组，多条则为二维元组
-    # 取查询的第一条结果
+    # 1.取查询的第一条结果
     # result = cursor.fetchone()
-    # 取查询的全部数据
+    # 2.取查询的全部数据
     result = cursor.fetchall()
-    # 取查询的指定条数数据
+    # 3.取查询的指定条数数据
     # result = cursor.fetchmany(3)  # 取3条
     print(result)
 
