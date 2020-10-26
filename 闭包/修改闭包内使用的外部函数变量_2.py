@@ -8,7 +8,7 @@ def func_out():
     def func_inner():
         # 在闭包内修改外部函数的变量
         # num1 = 20  # 本意是修改外部函数变量，其实是在闭包内定义了一个局部变量
-        # nonlocal num1
+        nonlocal num1
         num1 = 20
 
         # 2.内部要使用外部函数的变量
@@ -22,6 +22,6 @@ def func_out():
     return func_inner
 
 
-# 创建闭包对象
-new_func = func_out()
-
+if __name__ == '__main__':
+    # 创建闭包对象
+    new_func = func_out()
