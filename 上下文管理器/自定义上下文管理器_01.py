@@ -18,9 +18,9 @@ class File(object):
         self.file.close()
         print('over')
 
+
 # 即使有错误也能关闭
 if __name__ == '__main__':
     with File('1.txt', 'r') as file:
         data = file.read()
         print(data)
-
