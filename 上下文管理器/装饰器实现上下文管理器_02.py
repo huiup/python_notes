@@ -7,7 +7,7 @@ from contextlib import contextmanager
 def file_open(file_name, file_mode):
     try:
         file = open(file_name, file_mode)
-        # yield关键字之前的代码可以认为是上文方法﹐负责返回操作对象资源
+        # yield关键之前的代码可以认为是上文方法﹐负责返回操作对象资源
         yield file
     except Exception as e:
         print(e)
