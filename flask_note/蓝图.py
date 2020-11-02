@@ -11,12 +11,13 @@ def get_profile():
 
 
 # 注册蓝图
-# app.register_blueprint(user_bp)
-# 添加前缀
-app.register_blueprint(user_bp, url_prefix='/user')
+app.register_blueprint(user_bp)
+# 添加前缀：/user/profile
+# app.register_blueprint(user_bp, url_prefix='/user')
 
-
+# 其他方式
 from goods_BP import goods
+
 app.register_blueprint(goods)
 
 if __name__ == '__main__':

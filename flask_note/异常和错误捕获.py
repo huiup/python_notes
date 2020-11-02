@@ -4,8 +4,7 @@ app = Flask(__name__)
 '''
 异常主动抛出:
 abort()方法
-    抛出一个给定状态代码的HTTPException或者指定响应，例如想要用一个页面未找到异常来终止
-请求，你可以调用abort(404)。
+    抛出一个给定状态代码的HTTPException或者指定响应，例如想要用一个页面未找到异常来终止请求，你可以调用abort(404)。
     参数︰code - HTTP的错误状态码
 '''
 
@@ -15,7 +14,7 @@ abort()方法
 @app.route('/book')
 def book():
     book_id = request.args.get('book_id')
-    if  book_id is None:
+    if book_id is None:
         abort(400)  # 400 Bad Request
     return f'book_id is {book_id}'
 
